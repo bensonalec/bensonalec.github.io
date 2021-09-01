@@ -1,9 +1,7 @@
-baseURL = "/site/"
+baseURL = "/"
 languageCode = "en-us"
 title = "Alec Benson"
 theme = "hugo-winston-theme"
-relativeURLs = true
-canonifyURLs = true
 
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
