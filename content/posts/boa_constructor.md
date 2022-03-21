@@ -86,7 +86,7 @@ You will be provided with a link to a replit online programming environment, and
 ```
 and convert this to 
 ```
-range(0,10)
+range(1, 10)
 ```
 Note that the numbers in this should be dynamic, and you will need to add a new keyword for the string "...".
 ## Resources
