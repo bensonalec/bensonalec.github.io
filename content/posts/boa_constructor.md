@@ -79,7 +79,7 @@ This extension allows the user to type
  ```
  [3] * 4
  ```
-## Survery Setup
+## Survey Setup
 You will be provided with a link to a replit online programming environment, and a link to the form for this survey. We ask that you spend 30 minutes trying to implement an extension, which is an extension to the list rule in Python's regular grammar. This rule should take input in the form 
 ```
 [1...10]
@@ -88,7 +88,11 @@ and convert this to
 ```
 range(1, 10)
 ```
-Note that the numbers in this should be dynamic, and you will need to add a new keyword for the string "...".
+Note that the numbers in this should be dynamic. In your replit environment, you should have a file called "rust_range.py" that is in the extensions folder. You'll be editing this file for this experiment. When you run the code with the "run" button, it should raise an error saying that 
+```
+AttributeError: 'NoneType' object has no attribute 'translate'
+```
+This means that the extension is not implemented. When you edit the file "rust_range.py" and run, you will know it has succeeded when an error is not thrown. 
 ## Resources
 - Link 1
 - Link 2
