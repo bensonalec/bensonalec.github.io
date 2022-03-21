@@ -80,4 +80,6 @@ This extension allows the user to type
  [3] * 4
  ```
 ## Resources
-Vivamus sagittis diam et arcu posuere pharetra. Mauris malesuada mi vitae risus molestie, in pretium sapien scelerisque. Pellentesque aliquam gravida nisi in tincidunt. Nam ut mattis enim. Sed maximus ullamcorper pulvinar. Ut in elit eget tellus varius semper eu eu felis. Suspendisse tempor, ipsum et fermentum placerat, felis massa tempus nulla, in vehicula nisi ipsum a libero. Ut porttitor leo ut velit viverra, a viverra urna sollicitudin. Duis vel condimentum lacus, sed ultrices est. Quisque at metus bibendum, mollis sem a, mollis neque. Donec malesuada venenatis magna, eu tincidunt dolor semper quis. Maecenas luctus pharetra erat. Fusce egestas est sed nunc accumsan convallis. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+- Link 1
+- Link 2
+- Link 3
