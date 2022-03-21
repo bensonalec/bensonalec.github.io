@@ -79,13 +79,7 @@ This extension allows the user to type
  ```
  [3] * 4
  ```
-<form accept-charset="UTF-8" action="alert('Nice')">
-    <input type="text" name="answer" placeholder="Your Answer">
-    <button type="submit">Send</button>
-</form>
-
 ## Resources
-Something something something
 - Link 1
 - Link 2
 - Link 3
