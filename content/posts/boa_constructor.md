@@ -85,6 +85,7 @@ This extension allows the user to type
 </form>
 
 ## Resources
+Something something something
 - Link 1
 - Link 2
 - Link 3
