@@ -1,11 +1,11 @@
 ---
-title: Sample Post
-date: 2021-08-31
-description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam bibendum accumsan condimentum. Praesent tincidunt interdum mauris, eu condimentum est fermentum vestibulum. Donec suscipit velit id ligula dictum, in fermentum orci lobortis. Vestibulum fringilla libero a erat suscipit malesuada. Donec id facilisis orci, quis venenatis tortor. Aenean vehicula, nisl eget faucibus aliquet, dolor turpis accumsan libero, vel maximus magna metus in nibh. Phasellus rhoncus commodo suscipit. Fusce auctor volutpat mauris, tempus finibus urna ornare quis.
+title: Boa Constructor Introduction
+date: 2022-03-21
+description: 'An introduction to my thesis, Boa Constructor. Also provides links and references necessary to understand and work with it. 
 '
 ---
 
-## Lorem ipsum dolor sit amet, consectetur adipiscing elit
+## Background
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam bibendum accumsan condimentum. Praesent tincidunt interdum mauris, eu condimentum est fermentum vestibulum. Donec suscipit velit id ligula dictum, in fermentum orci lobortis. Vestibulum fringilla libero a erat suscipit malesuada. Donec id facilisis orci, quis venenatis tortor. Aenean vehicula, nisl eget faucibus aliquet, dolor turpis accumsan libero, vel maximus magna metus in nibh. Phasellus rhoncus commodo suscipit. Fusce auctor volutpat mauris, tempus finibus urna ornare quis.
 
