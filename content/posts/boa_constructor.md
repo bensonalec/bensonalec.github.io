@@ -27,16 +27,12 @@ Another example of a rule with a translation follows:
 ```
 list:
     | '[' [star_named_expressions] ']' { "[" OPTIONAL _a ENDOPTIONAL "]" }
-    | '[' NUMBER '...' NUMBER ']' { "range(" _a "," _b ")" }
 ```
 In this example, the first alternative is the traditional Python 3.10 list, in which the resulting translation (and original syntax) is defined in the translation. The second alternative is a new extension that's been added, in which a list where two numbers are separated by the "..." string are actually translated to an instance of the range function. This represents adding an extension that provides a rust-style shorthand for defining ranges. 
 
-## Sample Extensions
+## Rules For Translations
 
 Vivamus sagittis diam et arcu posuere pharetra. Mauris malesuada mi vitae risus molestie, in pretium sapien scelerisque. Pellentesque aliquam gravida nisi in tincidunt. Nam ut mattis enim. Sed maximus ullamcorper pulvinar. Ut in elit eget tellus varius semper eu eu felis. Suspendisse tempor, ipsum et fermentum placerat, felis massa tempus nulla, in vehicula nisi ipsum a libero. Ut porttitor leo ut velit viverra, a viverra urna sollicitudin. Duis vel condimentum lacus, sed ultrices est. Quisque at metus bibendum, mollis sem a, mollis neque. Donec malesuada venenatis magna, eu tincidunt dolor semper quis. Maecenas luctus pharetra erat. Fusce egestas est sed nunc accumsan convallis. Interdum et malesuada fames ac ante ipsum primis in faucibus.
 
-## Rules
-
-Vivamus sagittis diam et arcu posuere pharetra. Mauris malesuada mi vitae risus molestie, in pretium sapien scelerisque. Pellentesque aliquam gravida nisi in tincidunt. Nam ut mattis enim. Sed maximus ullamcorper pulvinar. Ut in elit eget tellus varius semper eu eu felis. Suspendisse tempor, ipsum et fermentum placerat, felis massa tempus nulla, in vehicula nisi ipsum a libero. Ut porttitor leo ut velit viverra, a viverra urna sollicitudin. Duis vel condimentum lacus, sed ultrices est. Quisque at metus bibendum, mollis sem a, mollis neque. Donec malesuada venenatis magna, eu tincidunt dolor semper quis. Maecenas luctus pharetra erat. Fusce egestas est sed nunc accumsan convallis. Interdum et malesuada fames ac ante ipsum primis in faucibus.
 ## Resources
 Vivamus sagittis diam et arcu posuere pharetra. Mauris malesuada mi vitae risus molestie, in pretium sapien scelerisque. Pellentesque aliquam gravida nisi in tincidunt. Nam ut mattis enim. Sed maximus ullamcorper pulvinar. Ut in elit eget tellus varius semper eu eu felis. Suspendisse tempor, ipsum et fermentum placerat, felis massa tempus nulla, in vehicula nisi ipsum a libero. Ut porttitor leo ut velit viverra, a viverra urna sollicitudin. Duis vel condimentum lacus, sed ultrices est. Quisque at metus bibendum, mollis sem a, mollis neque. Donec malesuada venenatis magna, eu tincidunt dolor semper quis. Maecenas luctus pharetra erat. Fusce egestas est sed nunc accumsan convallis. Interdum et malesuada fames ac ante ipsum primis in faucibus.
