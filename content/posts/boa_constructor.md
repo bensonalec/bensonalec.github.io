@@ -80,7 +80,7 @@ This extension allows the user to type
  [3] * 4
  ```
 <form accept-charset="UTF-8" action="alert('Nice')">
-    <input type="email" name="email" placeholder="Your Email">
+    <input type="text" name="answer" placeholder="Your Answer">
     <button type="submit">Send</button>
 </form>
 
