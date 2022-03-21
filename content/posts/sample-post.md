@@ -3,7 +3,8 @@ title: Boa Constructor Introduction
 date: 2022-03-21
 description: 'An introduction to my thesis, Boa Constructor. Also provides links and references necessary to understand and work with it. 
 '
-thumbnail: "https://i.imgur.com/dCwU1k4.png"
+featured_image: "/diython_fixed.png"
+thumbnail: "/diython_fixed.png"
 ---
 ![](https://i.imgur.com/dCwU1k4.png)
 
