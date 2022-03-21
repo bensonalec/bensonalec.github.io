@@ -28,7 +28,45 @@ Another example of a rule with a translation follows:
 list:
     | '[' [star_named_expressions] ']' { "[" OPTIONAL _a ENDOPTIONAL "]" }
 ```
-In this example, the first alternative is the traditional Python 3.10 list, in which the resulting translation (and original syntax) is defined in the translation. The second alternative is a new extension that's been added, in which a list where two numbers are separated by the "..." string are actually translated to an instance of the range function. This represents adding an extension that provides a rust-style shorthand for defining ranges. 
+In this example, the first alternative is the traditional Python 3.10 list, in which the resulting translation (and original syntax) is defined in the translation. 
+Actual extensions in Boa Constructor are Python files that contain a multiline string called "extension", that contains 
+the actual rule contents, and a list of strings called keywords contains any necessary keywords for the extension. Keywords are any strings that are used directly as strings in a grammar rule, in the first example below these are true and false, as they need to be parsed differently from generic strings in a programming language. 
+An example of a full extension is as follows:
+```
+extension = """
+atom:
+    | NAME { _a } 
+    | 'True' { "True" } 
+    | 'False' { "False" }
+    | 'true' { "True" }
+    | 'false' { "False" }
+    | 'None' { "None" }
+    | strings { _a } 
+    | NUMBER { _a } 
+    | (tuple | group | genexp) { _a } 
+    | (list | listcomp) { _a[0] } 
+    | (dict | set | dictcomp | setcomp) { _a } 
+    | '...' { "..." }
+"""
 
+keywords = [
+    "'true'",
+    "'false'",
+]
+```
+This extension allows a user to type true and false with entirely lowercase letters and Python to accept these as valid proxies for the True and False boolean keywords. 
+Another example of a full extension:
+```
+extension = """
+list:
+    | '[' [star_named_expressions] ']' { "[" OPTIONAL _a ENDOPTIONAL "]" }
+    | '[' NUMBER '::' NUMBER ']' { "[" _a "]" "*" _b }
+"""
+
+keywords = [
+    "'::'",
+]
+```
+This extension allows the user to type `[3::4]`, which creates a list containing 4 integers with a value of 3. So, the translation takes the first returned value (the number, _a) and the second returned value (the number, _b) and translates this to `NUMBER * NUMBER`, or in our example `[3] * 4`
 ## Resources
 Vivamus sagittis diam et arcu posuere pharetra. Mauris malesuada mi vitae risus molestie, in pretium sapien scelerisque. Pellentesque aliquam gravida nisi in tincidunt. Nam ut mattis enim. Sed maximus ullamcorper pulvinar. Ut in elit eget tellus varius semper eu eu felis. Suspendisse tempor, ipsum et fermentum placerat, felis massa tempus nulla, in vehicula nisi ipsum a libero. Ut porttitor leo ut velit viverra, a viverra urna sollicitudin. Duis vel condimentum lacus, sed ultrices est. Quisque at metus bibendum, mollis sem a, mollis neque. Donec malesuada venenatis magna, eu tincidunt dolor semper quis. Maecenas luctus pharetra erat. Fusce egestas est sed nunc accumsan convallis. Interdum et malesuada fames ac ante ipsum primis in faucibus.
