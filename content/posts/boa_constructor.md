@@ -79,6 +79,16 @@ This extension allows the user to type
  ```
  [3] * 4
  ```
+## Survery Setup
+You will be provided with a link to a replit online programming environment, and a link to the form for this survey. We ask that you spend 30 minutes trying to implement an extension, which is an extension to the list rule in Python's regular grammar. This rule should take input in the form 
+```
+[1...10]
+```
+and convert this to 
+```
+range(0,10)
+```
+Note that the numbers in this should be dynamic, and you will need to add a new keyword for the string "...".
 ## Resources
 - Link 1
 - Link 2
