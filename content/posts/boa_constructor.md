@@ -79,6 +79,11 @@ This extension allows the user to type
  ```
  [3] * 4
  ```
+<form accept-charset="UTF-8" action="alert('Nice')">
+    <input type="email" name="email" placeholder="Your Email">
+    <button type="submit">Send</button>
+</form>
+
 ## Resources
 - Link 1
 - Link 2
