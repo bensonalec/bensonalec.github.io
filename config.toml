@@ -10,7 +10,7 @@ paginate = 3
 [module]
   [module.hugoVersion]
     extended = true
-    min = "0.55.0"
+    min = "0.95.0"
 
 [params]
   mainSection = "posts"
