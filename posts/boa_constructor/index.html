@@ -35,7 +35,29 @@ keywords = [
     &#34;&#39;false&#39;&#34;,
 ]
 </code></pre><p>This extension allows a user to type <code>true</code> and <code>false</code> with entirely lowercase letters and Python to accept these as valid proxies for the <code>True</code> and <code>False</code> boolean keywords.
-Another example of a full extension:</p><pre tabindex=0><code>extension = &#34;&#34;&#34;
+Another example of an extension:</p><pre tabindex=0><code>extension = &#34;&#34;&#34;
+simple_stmt:
+    | assignment { _a } 
+    | star_expressions { _a } 
+    | return_stmt { _a } 
+    | import_stmt { _a } 
+    | raise_stmt { _a } 
+    | &#39;pass&#39; { &#34;pass&#34; } 
+    | del_stmt { _a } 
+    | yield_stmt { _a } 
+    | assert_stmt { _a } 
+    | &#39;break&#39; { &#34;break&#34; } 
+    | &#39;continue&#39; { &#34;continue&#34; } 
+    | global_stmt { _a } 
+    | nonlocal_stmt { _a }
+    | &#39;$&#39; { &#34;import pdb; pdb.set_trace()&#34; }
+
+&#34;&#34;&#34;
+
+keywords = [
+  &#34;&#39;$&#39;&#34;,
+]
+</code></pre><p>This extension allows a user to type <code>$</code> in a Python program, and translates this to a statement importing pdb (the Python Debugger) and calling it to set a breakpoint.</p><p>Another example of a full extension:</p><pre tabindex=0><code>extension = &#34;&#34;&#34;
 list:
     | &#39;[&#39; [star_named_expressions] &#39;]&#39; { &#34;[&#34; OPTIONAL _a ENDOPTIONAL &#34;]&#34; }
     | &#39;[&#39; NUMBER &#39;$&#39; NUMBER &#39;]&#39; { &#34;[&#34; _a &#34;]&#34; &#34;*&#34; _b }
