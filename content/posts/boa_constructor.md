@@ -29,7 +29,9 @@ list:
     | '[' [star_named_expressions] ']' { "[" OPTIONAL _a ENDOPTIONAL "]" }
 ```
 In this example, the first alternative is the traditional Python 3.10 list, in which the resulting translation (and original syntax) is defined in the translation.  
+### Extension Files
 Actual extensions in Boa Constructor are Python files that contain a multiline string called "extension", that contain the actual rule contents, and a list of strings called keywords contains any necessary keywords for the extension.   
+### Keywords
 Keywords are any strings that are used directly as strings in a grammar rule, in the first example below these are true and false, as they need to be parsed differently from generic strings in a programming language. 
 An example of a full extension is as follows:
 ```
