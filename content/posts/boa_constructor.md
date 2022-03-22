@@ -96,6 +96,5 @@ You will be provided with a link to a replit online programming environment, and
 Note that the numbers in this should be dynamic. In your replit environment, you should have a file called "rust_range.py" that is in the extensions folder. You'll be editing this file for this experiment. When you run the code with the "run" button, it should print `Input could not be parsed` to the terminal.
 This means that the extension is not implemented. When you edit the file "rust_range.py" and run, you will know it has succeeded when the program prints out `range(0, 10)`. 
 ## Resources
-- Link 1
-- Link 2
-- Link 3
+- [EBNF Grammar Wiki Page](https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form)
+- [EBNF Presentation](https://condor.depaul.edu/ichu/csc447/notes/wk3/BNF.pdf)
