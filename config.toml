@@ -1,7 +1,7 @@
 baseURL = "/"
 languageCode = "en-us"
 title = "Alec Benson"
-theme = "hugo-winston-theme"
+theme: "PaperMod"
 relativeURLs = true
 canonifyURLs = true
 
