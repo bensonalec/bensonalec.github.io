@@ -79,6 +79,33 @@ keywords = [
 ]
 ```
 This extension allows a user to type `true` and `false` with entirely lowercase letters and Python to accept these as valid proxies for the `True` and `False` boolean keywords. 
+Another example of an extension:
+```
+extension = """
+simple_stmt:
+    | assignment { _a } 
+    | star_expressions { _a } 
+    | return_stmt { _a } 
+    | import_stmt { _a } 
+    | raise_stmt { _a } 
+    | 'pass' { "pass" } 
+    | del_stmt { _a } 
+    | yield_stmt { _a } 
+    | assert_stmt { _a } 
+    | 'break' { "break" } 
+    | 'continue' { "continue" } 
+    | global_stmt { _a } 
+    | nonlocal_stmt { _a }
+    | '$' { "import pdb; pdb.set_trace()" }
+
+"""
+
+keywords = [
+  "'$'",
+]
+```
+This extension allows a user to type `$` in a Python program, and translates this to a statement importing pdb (the Python Debugger) and calling it to set a breakpoint.  
+  
 Another example of a full extension:
 ```
 extension = """
