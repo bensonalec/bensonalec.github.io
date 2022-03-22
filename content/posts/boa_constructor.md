@@ -15,8 +15,25 @@ Translation grammars are styled in the same way the official Python grammar is a
 ruleName: ruleContents { translationDefinition } 
         | alternativeContents { translationDefinition }
 ```
-Rule names are typically in camel case (although this is a style choice, not a requirement). The rule contents (and alternative contents) are rule definitions that can contain literal strings (":"), tokens (in all capital letters, defined in the Python standard library Tokenize package), and other rule names. As well as this, ruleContents can use positive and negative lookaheads (denoted with \& and !), optional blocks (either denoted by square brackets around some contents, or a question mark (?) following the optional contents), repetitions (with * denoting any number of repetitions, and + denoting more than 1 repetition), groups (some section of ruleContents wrapped in parentheses), and cuts (denoted with  ~) that tell the parser to commit to that rule even if it fails.  
-Translation definitions can include string literals, the special `TABBED` and `ENDTABBED` tokens (denoting that contents inside should be tabbed in a level), the `STARTLOOP` and `ENDLOOP` tokens (denoting that you should loop until any inner contents are empty), and the `OPTIONAL` and `ENDOPTIONAL` tokens (denoting that the section inside does not have to have contents). As well as these special tokens, the power in translations comes directly from accessing the inner children of that parse node, which is done by starting a variable name with \_ and following this with some letter in the English alphabet from a to z. This letter represents which variable in the parse nodes children you're accessing, with `a` representing the first child and `z` representing the 26th child. As well as this, you can index components of that child node by using `[index, subindex]` (specifically useful when you're accessing something that was part of a group). These translation definitions are quite powerful and can be used to build fully functioning translations from a parse node.  
+### Rule Contents
+Rule names are typically in camel case (although this is a style choice, not a requirement).  
+The rule contents (and alternative contents) are rule definitions that can contain:
+- literal strings (":") 
+- tokens (in all capital letters, defined in the Python standard library Tokenize package)
+- other rule names 
+As well as this, ruleContents can use: 
+- positive and negative lookaheads (denoted with \& and !)
+- optional blocks (either denoted by square brackets around some contents, or a question mark (?) following the optional contents)
+- repetitions (with * denoting any number of repetitions, and + denoting more than 1 repetition)
+- groups (some section of ruleContents wrapped in parentheses)
+- cuts (denoted with  ~) that tell the parser to commit to that rule even if it fails  
+### Translation Definitions
+Translation definitions can include:
+- string literals
+- the special `TABBED` and `ENDTABBED` tokens (denoting that contents inside should be tabbed in a level)
+- the `STARTLOOP` and `ENDLOOP` tokens (denoting that you should loop until any inner contents are empty), and 
+- the `OPTIONAL` and `ENDOPTIONAL` tokens (denoting that the section inside does not have to have contents)
+As well as these special tokens, the power in translations comes directly from accessing the inner children of that parse node, which is done by starting a variable name with \_ and following this with some letter in the English alphabet from a to z. This letter represents which variable in the parse nodes children you're accessing, with `a` representing the first child and `z` representing the 26th child. As well as this, you can index components of that child node by using `[index, subindex]` (specifically useful when you're accessing something that was part of a group). These translation definitions are quite powerful and can be used to build fully functioning translations from a parse node.  
 An example of a rule is as follows:
 ```
 assignment:
@@ -30,8 +47,7 @@ list:
 ```
 In this example, the first alternative is the traditional Python 3.10 list, in which the resulting translation (and original syntax) is defined in the translation.  
 ### Extension Files
-Actual extensions in Boa Constructor are Python files that contain a multiline string called "extension", that contain the actual rule contents, and a list of strings called keywords contains any necessary keywords for the extension.   
-### Keywords
+Actual extensions in Boa Constructor are Python files that contain a multiline string called "extension", that contain the actual rule contents, and a list of strings called keywords contains any necessary keywords for the extension.  
 Keywords are any strings that are used directly as strings in a grammar rule, in the first example below these are true and false, as they need to be parsed differently from generic strings in a programming language. 
 An example of a full extension is as follows:
 ```
