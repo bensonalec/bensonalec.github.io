@@ -67,9 +67,7 @@ keywords = [
     "'::'",
 ]
 ```
-This extension allows the user to type 
-`[3::4]`
-which creates a list containing 4 integers with a value of 3. So, the translation takes the first returned value (the number, _a) and the second returned value (the number, _b) and translates this to `[NUMBER] * NUMBER` or in our example `[3] * 4`
+This extension allows the user to type `[3::4]` which creates a list containing 4 integers with a value of 3. So, the translation takes the first returned value (the number, _a) and the second returned value (the number, _b) and translates this to `[NUMBER] * NUMBER` or in our example `[3] * 4`
 ## Survey Setup
 You will be provided with a link to a replit online programming environment, and a link to the form for this survey. We ask that you spend 30 minutes trying to implement an extension, which is an extension to the list rule in Python's regular grammar. This rule should take input in the form `[1...10]` and convert this to `range(1, 10)`
 Note that the numbers in this should be dynamic. In your replit environment, you should have a file called "rust_range.py" that is in the extensions folder. You'll be editing this file for this experiment. When you run the code with the "run" button, it should raise an error saying that 
