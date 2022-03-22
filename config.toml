@@ -1,13 +1,10 @@
 baseURL = "/"
 languageCode = "en-us"
 title = "Alec Benson"
-theme = "hugo-winston-theme"
+theme = "cactus"
 relativeURLs = true
 canonifyURLs = true
 
-pygmentsCodeFences = true
-pygmentsCodefencesGuessSyntax = true
-pygmentsUseClasses = true
 paginate = 3
 
 [module]
@@ -16,10 +13,6 @@ paginate = 3
     min = "0.55.0"
 
 [params]
-  google_analytics_id = ""
-  twitter_handle = "@benson_alec21"
-  showAuthorOnHomepage = true
-  showAuthorOnPosts = false
-  showPostsOnHomepage = true
-  addFrame = true
-  addDot = true
+  mainSection = "posts"
+  mainSectionTitle = "Posts"
+  colortheme = "white"
