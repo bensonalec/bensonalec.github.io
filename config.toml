@@ -16,3 +16,4 @@ paginate = 3
   mainSection = "posts"
   mainSectionTitle = "Posts"
   colortheme = "white"
+  description = "Thoughts on software, programming languages, and everything else."
